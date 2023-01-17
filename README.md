@@ -1,15 +1,15 @@
-## **Voici mon projet python : 2048**
+## **Voici mon projet python : Pac-Man**
 
-2048 est un jeu vidéo de type puzzle
+Pac-Man, personnage emblématique de l’histoire du jeu vidéo, est un personnage en forme de rond jaune doté d’une bouche. Il doit manger des pac-gommes et des bonus (sous forme de fruits) dans un labyrinthe hanté par quatre fantômes. Quatre pac-gommes spéciales (super pac-gommes) rendent les fantômes vulnérables pendant une courte période au cours de laquelle Pac-Man peut les manger. Les fantômes deviennent alors bleus et affichent une expression de peur signalée par des petits yeux et une bouche en ligne cassée et quand un fantôme se fait manger, ses yeux retournent dans la salle centrale du labyrinthe pour le faire redevenir normal
 
-Le but du jeu est de faire glisser des tuiles sur une grille, pour combiner les tuiles de mêmes valeurs et créer ainsi une tuile portant le nombre 2048. Le joueur peut toutefois continuer à jouer après cet objectif atteint pour faire le meilleur score possible !
+Le joueur remporte la partie lorsque qu'il a mangé tout les pac-gommes présents sur le terrain sans avoir été tué par les fantômes
 
 ____________________________________________________________________________________________________________________________________________________________
 
 **Décomposition en sous problème :**
 
-- Création des différentes formes de bloc
-- Fonction permettant de supprimer une ligne quand elle est complète
+- Création du plateau de jeux
+- Poo pour les 4 fantômes et Pac-man
 - Pouvoir controler le bloc qui desend
 - Choisir aléatoirement le bloc
 - Créer une variable de score
