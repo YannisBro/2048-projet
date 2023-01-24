@@ -10,11 +10,8 @@ ________________________________________________________________________________
 
 - Création du plateau de jeux
 - Poo pour les 4 fantômes et Pac-man
-- Pouvoir controler le bloc qui desend
-- Choisir aléatoirement le bloc
-- Créer une variable de score
-- Modéliser le plateau de jeux
-- Fonction pour la rotation des blocs
+- Création du score et des boules
+- Système de game over et de victoire
 
 ____________________________________________________________________________________________________________________________________________________________
 
