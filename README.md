@@ -17,10 +17,10 @@ ________________________________________________________________________________
 
 **Minimum viable Product :**
 
-- Création d'un plan de jeux et création des différents blocs
-- Pouvoir gerer les mouvements des blocs (tourner, gauche, droite, descendre)
+- Création du plateau de jeux
+- Créer les 5 personnages
 - Système de score
-- Repèrer quand une ligne est complète et la supprimer
+- Gérer les mouvements des personnages
 
 *Pour cela je vais utiliser pygame et la blibliothèque random avec des fonctions pour définir chaque bloc et leur mouvement*
 
