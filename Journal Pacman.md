@@ -4,7 +4,7 @@
 
 _Avancé :_
 
-- Initialisation des couleurs, musique, images
+- Initialisation des couleurs, musiques, images
 - Création du plateau de jeux
 - Début d'interface
 
