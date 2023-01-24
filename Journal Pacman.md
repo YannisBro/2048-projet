@@ -4,13 +4,13 @@
 
 _Avancé :_
 
-- Création des différente forme de bloc
+- Initialisation des couleurs, musique, images
 - Création du plateau de jeux
 - Début d'interface
 
 _Problème rencontré :_
 
-- Comment définir la forme des blocs
+- Problème dans l'affichage (Réglé)
 
 _____________________________________________________________________________________________________________________________________________________________
 
@@ -18,27 +18,26 @@ ________________________________________________________________________________
 
 _Avancé :_
 
-- Définition de la class des différents bloc
-- Fonction pour faire descendre les bloc
-- Création du score
+- 
+- 
+-
 
 _Problème rencontré :_
 
-- Bloc qui ne voulait pas descendre (Réglé)
-
+- 
 _____________________________________________________________________________________________________________________________________________________________
 
 **JOUR 3**
 
 _Avancé :_
 
-- Définition des couleurs et des texte
-- Définition des différentes fonction freeze, intersect, ect...
+- 
+- 
 
 _Problème rencontré :_
 
-- Bug de destruction de ligne
-- Bug de la fonction freeze
+- 
+- 
 
 _____________________________________________________________________________________________________________________________________________________________
 
@@ -46,14 +45,14 @@ ________________________________________________________________________________
 
 _Avancé :_
 
-- Création de l'écran game over
-- Création des actions sur les touches du clavier
-- Reglage de bug
+- 
+- 
+- 
 
 _Problème rencontré :_
 
-- Bug du game over (réglé)
-- Score bug (réglé)
+- 
+- 
 
 _____________________________________________________________________________________________________________________________________________________________
 
@@ -61,25 +60,25 @@ ________________________________________________________________________________
 
 _Avancé :_
 
-- Ajoute d'une musique
-- Ajout d'un fonction pour aller plus vite
+- 
+- 
 
 _Problème rencontré :_
 
-- Bloc qui ne s'arretais pas d'aller vite (réglé)
+- 
 _____________________________________________________________________________________________________________________________________________________________
 
 **JOUR 6**
 
 _Avancé :_
 
-- Ajout d'une fonction pour téléporter le bloc
-- Ajout d'une fonction pour relancer le jeux après Game over
+- 
+- 
 
 _Problème rencontré :_
 
-- Jeux qui crashait quand on relancais (réglé)
-- Son du jeux qui ne s'arretais pas (réglé)
+- 
+- 
 
 _____________________________________________________________________________________________________________________________________________________________
 
