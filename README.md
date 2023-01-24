@@ -22,6 +22,6 @@ ________________________________________________________________________________
 - Système de score
 - Gérer les mouvements des personnages
 
-*Pour cela je vais utiliser pygame et la blibliothèque random avec des fonctions pour définir chaque bloc et leur mouvement*
+*Pour cela je vais utiliser pygame pour l'affichage*
 
 à l'aide d'internet pour quelques fonctions
