@@ -60,8 +60,8 @@ ________________________________________________________________________________
 
 _Avancé :_
 
-- 
-- 
+- Assignation des touches clavier
+- Réglage de bug
 
 _Problème rencontré :_
 
