@@ -72,13 +72,13 @@ ________________________________________________________________________________
 
 _Avancé :_
 
-- 
-- 
+- Faire en sorte que les fantom aient des mouvements logique
+- Ecran de game Over et de victoire
 
 _Problème rencontré :_
 
-- 
-- 
+- Petit problème dans la logique des mouvements (réglé)
+- Game over qui fermais la fenêtre (réglé)
 
 _____________________________________________________________________________________________________________________________________________________________
 
