@@ -86,8 +86,8 @@ ________________________________________________________________________________
 
 _Avancé :_
 
--
--
+- Bouton relancer et quitter
+- Finiton et réglage de bug
 
 _Problème rencontré :_
 
