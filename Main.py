@@ -124,7 +124,7 @@ class Block(pygame.sprite.Sprite):
 
 # Cette classe représente la barre en bas que le joueur contrôle
 
-class Player(pygame.sprite.Sprite):
+class Joueur(pygame.sprite.Sprite):
   
     # Définit le vecteur de vitesse
     
@@ -205,7 +205,7 @@ class Player(pygame.sprite.Sprite):
             self.rect.top=old_y
 
 
-class Ghost(Player):
+class fantome(Joueur):
     # Change la vitesse des fantomes
     def changespeed(self,list,ghost,turn,steps,l):
       try:
@@ -353,17 +353,17 @@ screen = pygame.display.set_mode([606, 606])
 pygame.display.set_caption('Pacman')
 
 # Créer une surface sur laquelle nous pouvons dessiner
-background = pygame.Surface(screen.get_size())
+Fondd = pygame.Surface(screen.get_size())
 
 # Utilisé pour convertir des cartes de couleurs et autres
-background = background.convert()
+Fondd = Fondd.convert()
   
 # Remplit l'écran avec un fond noir
-background.fill(noir)
+Fondd.fill(noir)
 
 
 
-clock = pygame.time.Clock()
+horloge = pygame.time.Clock()
 
 pygame.font.init()
 font = pygame.font.Font("freesansbold.ttf", 24)
@@ -406,23 +406,23 @@ def startGame():
 
   # Aspect graphique des personnages
   
-  Pacman = Player( w, p_h, "images/Trollman.png" )
+  Pacman = Joueur( w, p_h, "images/Trollman.png" )
   all_sprites_list.add(Pacman)
   pacman_collide.add(Pacman)
    
-  Blinky=Ghost( w, b_h, "images/Blinky.png" )
+  Blinky = fantome ( w, b_h, "images/Blinky.png" )
   monsta_list.add(Blinky)
   all_sprites_list.add(Blinky)
 
-  Pinky=Ghost( w, m_h, "images/Pinky.png" )
+  Pinky = fantome ( w, m_h, "images/Pinky.png" )
   monsta_list.add(Pinky)
   all_sprites_list.add(Pinky)
    
-  Inky=Ghost( i_w, m_h, "images/Inky.png" )
+  Inky = fantome ( i_w, m_h, "images/Inky.png" )
   monsta_list.add(Inky)
   all_sprites_list.add(Inky)
    
-  Clyde=Ghost( c_w, m_h, "images/Clyde.png" )
+  Clyde = fantome ( c_w, m_h, "images/Clyde.png" )
   monsta_list.add(Clyde)
   all_sprites_list.add(Clyde)
 
@@ -456,17 +456,17 @@ def startGame():
 
   score = 0
 
-  done = False
+  fait = False
 
   i = 0
 
-  while done == False:
+  while fait == False:
       
       # Association des touches pour jouer
       
       for event in pygame.event.get():
           if event.type == pygame.QUIT:
-              done=True
+              fait = True
 
           if event.type == pygame.KEYDOWN:
               if event.key == pygame.K_LEFT:
@@ -549,7 +549,7 @@ def startGame():
 
       pygame.display.flip()
     
-      clock.tick(10)
+      horloge.tick(10)
 
 def doNext(message,left,all_sprites_list,block_list,monsta_list,pacman_collide,wall_list,gate):
   while True:
@@ -589,7 +589,7 @@ def doNext(message,left,all_sprites_list,block_list,monsta_list,pacman_collide,w
 
       pygame.display.flip()
 
-      clock.tick(10)
+      horloge.tick(10)
 
 startGame()
 
