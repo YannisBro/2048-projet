@@ -343,7 +343,7 @@ cl = len(Clyde_directions)-1
 pygame.init()
   
 # Créer un écran de taille 606x606
-screen = pygame.display.set_mode([606, 606])
+ecran = pygame.display.set_mode([606, 606])
 
 # Il s'agit d'une liste de "sprites". Chaque bloc du programme est
 # ajouté à cette liste. La liste est gérée par une classe appelée "RenderPlain".
@@ -353,7 +353,7 @@ screen = pygame.display.set_mode([606, 606])
 pygame.display.set_caption('Pacman')
 
 # Créer une surface sur laquelle nous pouvons dessiner
-Fondd = pygame.Surface(screen.get_size())
+Fondd = pygame.Surface(ecran.get_size())
 
 # Utilisé pour convertir des cartes de couleurs et autres
 Fondd = Fondd.convert()
@@ -529,15 +529,15 @@ def startGame():
    
      # TOUT LE DESSIN DOIT PASSER EN DESSOUS DE CE COMMENTAIRE
      
-      screen.fill(noir)
+      ecran.fill(noir)
         
-      wall_list.draw(screen)
-      gate.draw(screen)
-      all_sprites_list.draw(screen)
-      monsta_list.draw(screen)
+      wall_list.draw(ecran)
+      gate.draw(ecran)
+      all_sprites_list.draw(ecran)
+      monsta_list.draw(ecran)
 
       text=font.render("Score: "+str(score)+"/"+str(bll), True, rouge)
-      screen.blit(text, [10, 10])
+      ecran.blit(text, [10, 10])
 
       if score == bll:
         doNext("Bravo, tu as gagné !",145,all_sprites_list,block_list,monsta_list,pacman_collide,wall_list,gate)
@@ -575,17 +575,17 @@ def doNext(message,left,all_sprites_list,block_list,monsta_list,pacman_collide,w
       w = pygame.Surface((400,200))  # La taille de l'écran
       w.set_alpha(10)                # alpha level
       w.fill((128,128,128))           # Remplit la surface entière
-      screen.blit(w, (100,200))    # (0,0) sont les coordonncoordonnées en haut à gauche
+      ecran.blit(w, (100,200))    # (0,0) sont les coordonncoordonnées en haut à gauche
 
       # Gagne ou perd
       
       text1=font.render(message, True, blanc)
-      screen.blit(text1, [left, 233])
+      ecran.blit(text1, [left, 233])
 
       text2=font.render("Pour rejouer, appuie sur ENTRER.", True, blanc)
-      screen.blit(text2, [100, 303])
+      ecran.blit(text2, [100, 303])
       text3=font.render("Pour quitter, appuie sur ESC.", True, blanc)
-      screen.blit(text3, [130, 333])
+      ecran.blit(text3, [130, 333])
 
       pygame.display.flip()
 
