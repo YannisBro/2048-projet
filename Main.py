@@ -6,13 +6,13 @@ except ImportError:
     
 import pygame
   
-black = (0,0,0)
-white = (255,255,255)
+noir = (0,0,0)
+blanc = (255,255,255)
 blue = (0,0,255)
-green = (0,255,0)
-red = (255,0,0)
-purple = (255,0,255)
-yellow   = ( 255, 255,0)
+vert = (0,255,0)
+rouge = (255,0,0)
+violet = (255,0,255)
+jaune = ( 255, 255,0)
 
 Iicon =pygame.image.load('pacmanicon.png')
 pygame.display.set_icon(Iicon)
@@ -95,7 +95,7 @@ def setupRoomOne(all_sprites_list):
  
 def setupGate(all_sprites_list):
       gate = pygame.sprite.RenderPlain()
-      gate.add(Wall(282,242,42,2,white))
+      gate.add(Wall(282,242,42,2,blanc))
       all_sprites_list.add(gate)
       return gate
 
@@ -112,8 +112,8 @@ class Block(pygame.sprite.Sprite):
         # Créer une image du bloc et la remplie d'une couleur.
         # Il peut également s'agir d'une image chargée à partir du disque.
         self.image = pygame.Surface([width, height])
-        self.image.fill(white)
-        self.image.set_colorkey(white)
+        self.image.fill(blanc)
+        self.image.set_colorkey(blanc)
         pygame.draw.ellipse(self.image,color,[0,0,width,height])
  
         # Récupére l'objet rectangle qui a les dimensions de l'image
@@ -359,7 +359,7 @@ background = pygame.Surface(screen.get_size())
 background = background.convert()
   
 # Remplit l'écran avec un fond noir
-background.fill(black)
+background.fill(noir)
 
 
 
@@ -433,7 +433,7 @@ def startGame():
           if (row == 7 or row == 8) and (column == 8 or column == 9 or column == 10):
               continue
           else:
-            block = Block(yellow, 4, 4)
+            block = Block(jaune, 4, 4)
 
             # Définit un emplacement aléatoire pour le bloc
             
@@ -529,14 +529,14 @@ def startGame():
    
      # TOUT LE DESSIN DOIT PASSER EN DESSOUS DE CE COMMENTAIRE
      
-      screen.fill(black)
+      screen.fill(noir)
         
       wall_list.draw(screen)
       gate.draw(screen)
       all_sprites_list.draw(screen)
       monsta_list.draw(screen)
 
-      text=font.render("Score: "+str(score)+"/"+str(bll), True, red)
+      text=font.render("Score: "+str(score)+"/"+str(bll), True, rouge)
       screen.blit(text, [10, 10])
 
       if score == bll:
@@ -579,13 +579,13 @@ def doNext(message,left,all_sprites_list,block_list,monsta_list,pacman_collide,w
 
       # Gagne ou perd
       
-      text1=font.render(message, True, white)
+      text1=font.render(message, True, blanc)
       screen.blit(text1, [left, 233])
 
-      text2=font.render("Pour rejouer, appuie sur ENTRER.", True, white)
-      screen.blit(text2, [135, 303])
-      text3=font.render("Pour quitter, appuie sur ESC.", True, white)
-      screen.blit(text3, [165, 333])
+      text2=font.render("Pour rejouer, appuie sur ENTRER.", True, blanc)
+      screen.blit(text2, [100, 303])
+      text3=font.render("Pour quitter, appuie sur ESC.", True, blanc)
+      screen.blit(text3, [130, 333])
 
       pygame.display.flip()
 
@@ -594,4 +594,3 @@ def doNext(message,left,all_sprites_list,block_list,monsta_list,pacman_collide,w
 startGame()
 
 pygame.quit()
-
