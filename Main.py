@@ -14,36 +14,45 @@ rouge = (255,0,0)
 violet = (255,0,255)
 jaune = ( 255, 255,0)
 
-Iicon =pygame.image.load('pacmanicon.png')
+Iicon = pygame.image.load('pacmanicon.png')
 pygame.display.set_icon(Iicon)
 
 # Ajout de musique
+
 pygame.mixer.init()
 pygame.mixer.music.load('pacman.mp3')
 pygame.mixer.music.play(-1, 0.0)
 
 # Cette classe représente la barre en bas que le joueur contrôle
+
 class Wall(pygame.sprite.Sprite):
     # Fonction Constructeur
+    
     def __init__(self,x,y,width,height, color):
         # Apelle le constructeur du parent
+        
         pygame.sprite.Sprite.__init__(self)
    
         # Fait un mur bleu, de la taille spécifiée dans les paramètres
+        
         self.image = pygame.Surface([width, height])
         self.image.fill(color)
   
         # Fait de notre coin supérieur gauche l'emplacement de passage.
+        
         self.rect = self.image.get_rect()
         self.rect.top = y
         self.rect.left = x
 
 # Cela crée tous les murs de la pièce 1
+
 def setupRoomOne(all_sprites_list):
     # Fait les murs. (x_pos, y_pos, width, height)
+    
     wall_list=pygame.sprite.RenderPlain()
      
     # Ceci est une liste de murs. Chacun est sous la forme [x, y, width, height]
+    
     walls = [ [0,0,6,600],
               [0,0,600,6],
               [0,600,606,6],
@@ -85,12 +94,14 @@ def setupRoomOne(all_sprites_list):
             ]
      
     # Fait une boucle dans la liste. Créer le mur, l'ajoute à la liste
+    
     for item in walls:
         wall=Wall(item[0],item[1],item[2],item[3],blue)
         wall_list.add(wall)
         all_sprites_list.add(wall)
          
     # retourne notre nouvelle liste
+    
     return wall_list
  
 def setupGate(all_sprites_list):
@@ -99,18 +110,23 @@ def setupGate(all_sprites_list):
       all_sprites_list.add(gate)
       return gate
 
-# Cette classe représente la boule        
+# Cette classe représente la boule  
+      
 # Elle dérive de la classe "Sprite" de Pygame
+
 class Block(pygame.sprite.Sprite):
      
     # Constructeur. Passe dans la couleur du bloc,
     # et sa position x et y
+    
     def __init__(self, color, width, height):
         # Appele le constructeur de la classe parent (Sprite)
+        
         pygame.sprite.Sprite.__init__(self) 
  
         # Créer une image du bloc et la remplie d'une couleur.
         # Il peut également s'agir d'une image chargée à partir du disque.
+        
         self.image = pygame.Surface([width, height])
         self.image.fill(blanc)
         self.image.set_colorkey(blanc)
@@ -120,6 +136,7 @@ class Block(pygame.sprite.Sprite):
         # image.
         # Met à jour la position de cet objet en définissant les valeurs
         # de rect.x et rect.y
+        
         self.rect = self.image.get_rect() 
 
 # Cette classe représente la barre en bas que le joueur contrôle
@@ -150,16 +167,19 @@ class Joueur(pygame.sprite.Sprite):
         self.prev_y = y
 
     # Efface la vitesse du joueur
+    
     def prevdirection(self):
         self.prev_x = self.change_x
         self.prev_y = self.change_y
 
     # Change la vitesse du joueur
+    
     def changespeed(self,x,y):
         self.change_x+=x
         self.change_y+=y
           
     # Trouve une nouvelle position pour le joueur
+    
     def update(self,walls,gate):
         # Obtien l'ancienne position, au cas où nous aurions besoin d'y revenir
         
@@ -207,6 +227,7 @@ class Joueur(pygame.sprite.Sprite):
 
 class fantome(Joueur):
     # Change la vitesse des fantomes
+    
     def changespeed(self,list,ghost,turn,steps,l):
       try:
         z=list[turn][2]
@@ -340,9 +361,11 @@ il = len(Inky_directions)-1
 cl = len(Clyde_directions)-1
 
 # Appele cette fonction pour que la bibliothèque Pygame puisse s'initialiser
+
 pygame.init()
   
 # Créer un écran de taille 606x606
+
 ecran = pygame.display.set_mode([606, 606])
 
 # Il s'agit d'une liste de "sprites". Chaque bloc du programme est
@@ -350,15 +373,19 @@ ecran = pygame.display.set_mode([606, 606])
 
 
 # Définit le titre de la fenêtre
+
 pygame.display.set_caption('Pacman')
 
 # Créer une surface sur laquelle nous pouvons dessiner
+
 Fondd = pygame.Surface(ecran.get_size())
 
 # Utilisé pour convertir des cartes de couleurs et autres
+
 Fondd = Fondd.convert()
   
 # Remplit l'écran avec un fond noir
+
 Fondd.fill(noir)
 
 
@@ -369,6 +396,7 @@ pygame.font.init()
 font = pygame.font.Font("freesansbold.ttf", 24)
 
 # emplacements par défaut pour Pacman et les monstres
+
 w = 303-16 #Width
 p_h = (7*60)+19 #Pacman taille
 m_h = (4*60)+19 #Monstre taille
