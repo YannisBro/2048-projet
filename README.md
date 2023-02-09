@@ -25,3 +25,11 @@ ________________________________________________________________________________
 *Pour cela je vais utiliser pygame pour l'affichage*
 
 à l'aide d'internet pour quelques fonctions
+
+___________________________________________________________________________________________________________________________________________________________
+
+**Proposition d'évolution :**
+
+- Grosse pac-gommes pour pouvoir manger les fantomes
+-
+-
