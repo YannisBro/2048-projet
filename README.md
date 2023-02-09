@@ -32,4 +32,4 @@ ________________________________________________________________________________
 
 - Grosse pac-gommes pour pouvoir manger les fantomes
 - Augmentation de la difficulté par rapport au score
--
+- Génération de terrain aléatoire
