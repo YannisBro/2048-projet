@@ -31,5 +31,5 @@ ________________________________________________________________________________
 **Proposition d'évolution :**
 
 - Grosse pac-gommes pour pouvoir manger les fantomes
--
+- Augmentation de la difficulté par rapport au score
 -
